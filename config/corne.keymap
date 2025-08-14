@@ -78,7 +78,27 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <20 21 20 21 19>;
+            key-positions = <3 4 2>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <14 15 16>;
+        };
+
+        Paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <15 16 17>;
+        };
+
+        Undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <13 14 15>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <21 22 20>;
         };
     };
 
