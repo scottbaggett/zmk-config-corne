@@ -5,13 +5,11 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1300  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
-
 #define DEF 0
 #define NAV 1
 #define SYM 2
 #define ADJ 3
 #define EXTRA 4
-
 
 / {
     behaviors {
@@ -80,42 +78,7 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <13 29>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 21>;
-        };
-
-        perc {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <28 16>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        copy {
-            bindings = <&kp LG(K_COPY)>;
-            key-positions = <28 27>;
-        };
-
-        paste {
-            bindings = <&kp LG(K_PASTE)>;
-            key-positions = <26 27>;
-        };
-
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <30 18>;
+            key-positions = <20 21 20 21 19>;
         };
     };
 
