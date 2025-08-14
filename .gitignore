@@ -1,0 +1,5 @@
+zephyr
+.west
+build
+modules
+zmk
