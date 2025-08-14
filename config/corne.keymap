@@ -104,6 +104,13 @@
         mouse {
             bindings = <&to 4>;
             key-positions = <3 16 14>;
+            layers = <0>;
+        };
+
+        exit {
+            bindings = <&to 0>;
+            key-positions = <3 16 14>;
+            layers = <4>;
         };
     };
 
