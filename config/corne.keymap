@@ -4,13 +4,14 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1300  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 50    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
 #define DEF 0
 #define NAV 1
 #define SYM 2
 #define ADJ 3
 #define EXTRA 4
+
 
 / {
     behaviors {
