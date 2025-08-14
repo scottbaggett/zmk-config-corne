@@ -102,7 +102,7 @@
         };
 
         mouse {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <3 16 14>;
             layers = <0>;
         };
@@ -110,7 +110,7 @@
         exit {
             bindings = <&to 0>;
             key-positions = <3 16 14>;
-            layers = <4>;
+            layers = <5>;
         };
     };
 
@@ -119,8 +119,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DEF {
-            display-name = "Base";
+        MAIN {
+            display-name = "main";
 
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
@@ -129,10 +129,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E           &kp R           &kp T      &kp Y      &kp U              &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LCTRL       &kp A  &kp S  &kp D           &hm LSHFT F     &kp G      &kp H      &hm RIGHT_SHIFT J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C           &kp V           &kp B      &kp N      &kp M              &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                              &lt 2 LEFT_GUI  &lt 1 LEFT_GUI  &kp RET    &kp SPACE  &kp BACKSPACE      &mo 2
+&kp TAB         &kp Q  &kp W  &kp E           &kp R           &kp T      &kp Y      &kp U              &kp I            &kp O    &kp P     &kp ESCAPE
+&kp LCTRL       &kp A  &kp S  &kp D           &hm LSHFT F     &kp G      &kp H      &hm RIGHT_SHIFT J  &kp K            &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C           &kp V           &kp B      &kp N      &kp M              &kp COMMA        &kp DOT  &kp FSLH  &kp RSHFT
+                              &lt 5 LEFT_GUI  &lt 1 LEFT_GUI  &kp RET    &kp SPACE  &lt 2 BACKSPACE    &kt RIGHT_SHIFT
             >;
         };
 
@@ -170,7 +170,7 @@
             >;
         };
 
-        ADJ {
+        SYS {
             display-name = "System";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
@@ -180,8 +180,8 @@
             >;
         };
 
-        EXTRA {
-            display-name = "Extra";
+        MouseNav {
+            display-name = "Mouse";
             bindings = <
 &trans  &trans  &trans          &mmv MOVE_UP    &trans           &trans    &trans     &trans          &msc SCRL_UP    &trans           &trans     &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &mkp LCLK  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &mkp RCLK  &trans
@@ -189,12 +189,21 @@
                                 &trans          &trans           &trans    &trans     &trans          &to 0
             >;
         };
+
+        Cmd2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        l3 {
+        System {
             if-layers = <1 2>;
             then-layer = <3>;
         };
