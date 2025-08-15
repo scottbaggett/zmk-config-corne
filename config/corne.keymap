@@ -80,18 +80,6 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
-
-        toMouse {
-            bindings = <&to 4>;
-            key-positions = <3 16 14>;
-            layers = <0>;
-        };
-
-        exitMouse {
-            bindings = <&to 0>;
-            key-positions = <3 16 14>;
-            layers = <4>;
-        };
     };
 
     //
@@ -112,7 +100,7 @@
 &kp TAB         &kp Q  &kp W  &kp E               &kp R         &kp T          &kp Y            &kp U              &kp I          &kp O    &kp P     &kp BACKSPACE
 &kp LCTRL       &kp A  &kp S  &kp D               &hm LSHFT F   &kp G          &kp H            &hm RIGHT_SHIFT J  &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C               &kp V         &kp B          &kp N            &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                              &lt 5 LC(UP_ARROW)  &kp LEFT_GUI  &lt 1 ENTER    &lt 2 BACKSPACE  &kp SPACE          &kp RIGHT_ALT
+                              &lt 4 LC(UP_ARROW)  &kp LEFT_GUI  &lt 1 ENTER    &lt 2 BACKSPACE  &kp SPACE          &kp RIGHT_ALT
             >;
         };
 
@@ -126,10 +114,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans     &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp EQUAL       &kp MINUS      &kp SQT       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-&trans     &kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0         &kp UNDERSCORE  &kp PLUS       &kp COMMA     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
-                                          &trans        &trans        &trans         &trans          &trans         &trans
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans     &trans           &trans       &trans    &trans      &trans         &kp EQUAL       &kp MINUS      &kp SQT       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+&trans     &trans           &trans       &trans    &trans      &trans         &kp UNDERSCORE  &kp PLUS       &kp COMMA     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+                                         &trans    &trans      &trans         &trans          &trans         &trans
             >;
         };
 
@@ -143,10 +131,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LC(LA(D))     &kp LC(LA(E))  &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &kp LC(LA(ENTER))    &kp LA(LC(LG(LS(NUMBER_1))))  &kp LA(LS(LC(LG(NUMBER_2))))  &kp UP_ARROW    &kp LS(LA(LC(LG(NUMBER_4))))  &kp LS(LA(LC(LG(N5))))  &trans
-&trans  &kp C_PLAY_PAUSE  &kp C_PREV     &kp C_NEXT        &kp LEFT_SHIFT     &kp LS(LG(ENTER))    &kp HOME                      &kp LEFT_ARROW                &kp DOWN_ARROW  &kp RIGHT                     &kp END                 &trans
-&trans  &trans            &trans         &trans            &kp C_VOLUME_DOWN  &kp C_VOL_UP         &kp DEL                       &kp BACKSPACE                 &kp PAGE_DOWN   &kp PG_UP                     &trans                  &trans
-                                         &trans            &trans             &kp LG(SPACE)        &trans                        &trans                        &trans
+&trans  &trans      &trans          &mmv MOVE_UP      &trans             &trans               &kp LC(LA(LS(NUMBER_1)))  &kp LA(LS(LC(NUMBER_2)))  &kp UP_ARROW    &kp LS(LA(LC(NUMBER_3)))  &kp LS(LA(LC(NUMBER_4)))  &trans
+&trans  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &kp LS(LG(ENTER))    &kp HOME                  &kp LEFT_ARROW            &kp DOWN_ARROW  &kp RIGHT                 &kp END                   &trans
+&trans  &kp C_PREV  &kp C_NEXT      &kp C_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOL_UP         &kp DEL                   &kp BACKSPACE             &kp PAGE_DOWN   &kp PG_UP                 &trans                    &trans
+                                    &trans            &trans             &kp LG(SPACE)        &trans                    &trans                    &trans
             >;
         };
 
@@ -160,22 +148,12 @@
             >;
         };
 
-        MouseNav {
-            display-name = "Mouse";
-            bindings = <
-&trans  &trans  &trans          &mmv MOVE_UP    &trans           &trans    &trans     &trans          &msc SCRL_UP    &trans           &trans     &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &mkp LCLK  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &mkp RCLK  &trans
-&trans  &trans  &trans          &trans          &trans           &trans    &trans     &trans          &trans          &trans           &trans     &trans
-                                &trans          &trans           &trans    &trans     &trans          &to 0
-            >;
-        };
-
         Cmd2 {
             bindings = <
-&kp ESC   &trans  &trans  &trans  &kp LG(LS(NUMBER_4))  &trans    &kp N7                 &kp N8  &kp N9                   &trans  &trans  &trans
-&kp CAPS  &trans  &trans  &trans  &trans                &trans    &kp N4                 &kp N5  &kp N6                   &trans  &trans  &trans
-&trans    &trans  &trans  &trans  &trans                &trans    &kp N1                 &kp N2  &kp N3                   &trans  &trans  &trans
-                          &trans  &trans                &trans    &kp RA(RC(RIGHT_GUI))  &kp N0  &kp RC(RA(RIGHT_SHIFT))
+&kp ESC   &trans  &trans  &trans  &trans  &trans    &kp N7                 &kp N8  &kp N9                   &kp N0  &trans  &trans
+&kp CAPS  &trans  &trans  &trans  &trans  &trans    &kp N4                 &kp N5  &kp N6                   &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &kp N1                 &kp N2  &kp N3                   &trans  &trans  &trans
+                          &trans  &trans  &trans    &kp RA(RC(RIGHT_GUI))  &kp N0  &kp RC(RA(RIGHT_SHIFT))
             >;
         };
     };
