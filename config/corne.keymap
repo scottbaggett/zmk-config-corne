@@ -100,11 +100,11 @@
 &kp TAB         &kp Q  &kp W  &kp E               &kp R         &kp T          &kp Y            &kp U              &kp I          &kp O    &kp P     &kp BACKSPACE
 &kp LCTRL       &kp A  &kp S  &kp D               &hm LSHFT F   &kp G          &kp H            &hm RIGHT_SHIFT J  &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C               &kp V         &kp B          &kp N            &kp M              &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                              &lt 4 LC(UP_ARROW)  &kp LEFT_GUI  &lt 1 ENTER    &lt 2 BACKSPACE  &kp SPACE          &kp RIGHT_ALT
+                              &lt 3 LC(UP_ARROW)  &kp LEFT_GUI  &lt 1 ENTER    &lt 2 BACKSPACE  &kp SPACE          &kp RIGHT_ALT
             >;
         };
 
-        Symbol {
+        SYM {
             display-name = "SYM";
 
             // -----------------------------------------------------------------------------------------
@@ -121,7 +121,7 @@
             >;
         };
 
-        CMD {
+        CMDNAV {
             display-name = "COMMANDS";
 
             // -----------------------------------------------------------------------------------------
@@ -138,6 +138,15 @@
             >;
         };
 
+        NUMCMD {
+            bindings = <
+&kp ESC   &trans  &trans  &trans  &trans  &trans    &kp N7                 &kp N8  &kp N9                   &kp N0  &trans  &trans
+&kp CAPS  &trans  &trans  &trans  &trans  &trans    &kp N4                 &kp N5  &kp N6                   &trans  &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &kp N1                 &kp N2  &kp N3                   &trans  &trans  &trans
+                          &trans  &trans  &trans    &kp RA(RC(RIGHT_GUI))  &kp N0  &kp RC(RA(RIGHT_SHIFT))
+            >;
+        };
+
         SYS {
             display-name = "System";
             bindings = <
@@ -147,23 +156,14 @@
                                     &trans        &trans      &trans            &trans  &trans  &trans
             >;
         };
-
-        Cmd2 {
-            bindings = <
-&kp ESC   &trans  &trans  &trans  &trans  &trans    &kp N7                 &kp N8  &kp N9                   &kp N0  &trans  &trans
-&kp CAPS  &trans  &trans  &trans  &trans  &trans    &kp N4                 &kp N5  &kp N6                   &trans  &trans  &trans
-&trans    &trans  &trans  &trans  &trans  &trans    &kp N1                 &kp N2  &kp N3                   &trans  &trans  &trans
-                          &trans  &trans  &trans    &kp RA(RC(RIGHT_GUI))  &kp N0  &kp RC(RA(RIGHT_SHIFT))
-            >;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         System {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 5>;
+            then-layer = <2>;
         };
     };
 };
