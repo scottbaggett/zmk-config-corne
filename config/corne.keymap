@@ -81,36 +81,16 @@
             key-positions = <0 1>;
         };
 
-        copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <14 15 16>;
-        };
-
-        Paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <15 16 17>;
-        };
-
-        Undo {
-            bindings = <&kp LG(Z)>;
-            key-positions = <13 14 15>;
-        };
-
-        redo {
-            bindings = <&kp LG(LS(Z))>;
-            key-positions = <21 22 20>;
-        };
-
-        mouse {
+        toMouse {
             bindings = <&to 4>;
             key-positions = <3 16 14>;
             layers = <0>;
         };
 
-        exit {
+        exitMouse {
             bindings = <&to 0>;
             key-positions = <3 16 14>;
-            layers = <5>;
+            layers = <4>;
         };
     };
 
