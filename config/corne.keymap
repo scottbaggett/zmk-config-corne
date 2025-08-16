@@ -80,6 +80,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <15 14 39>;
+        };
+
+        BrowserTab {
+            bindings = <&browsertab>;
+            key-positions = <16 17>;
+        };
     };
 
     //
