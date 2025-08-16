@@ -114,10 +114,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR     &kp PERCENT         &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS                   &kp RIGHT_PARENTHESIS                    &trans
-&trans     &trans           &trans       &trans    &kp LESS_THAN  &kp GREATER_THAN    &kp EQUAL       &kp MINUS      &kp SQT       &kp LEFT_BRACE                         &kp RIGHT_BRACE                          &kp PIPE
-&trans     &trans           &trans       &trans    &trans         &trans              &kp UNDERSCORE  &kp PLUS       &kp COMMA     &mt LG(LS(LEFT_BRACKET)) LEFT_BRACKET  &mt LG(LS(RIGHT_BRACKET)) RIGHT_BRACKET  &trans
-                                         &trans    &trans         &trans              &trans          &trans         &trans
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR     &kp PERCENT         &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS                   &kp RIGHT_PARENTHESIS                    &trans
+&trans     &trans           &trans       &kp COLON  &kp LESS_THAN  &kp GREATER_THAN    &kp EQUAL       &kp MINUS      &kp SQT       &kp LEFT_BRACE                         &kp RIGHT_BRACE                          &kp PIPE
+&trans     &trans           &trans       &trans     &trans         &trans              &kp UNDERSCORE  &kp PLUS       &kp COMMA     &mt LG(LS(LEFT_BRACKET)) LEFT_BRACKET  &mt LG(LS(RIGHT_BRACKET)) RIGHT_BRACKET  &trans
+                                         &trans     &trans         &trans              &trans          &trans         &trans
             >;
         };
 
