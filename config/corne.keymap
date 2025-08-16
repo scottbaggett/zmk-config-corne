@@ -76,13 +76,8 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
-        };
-
         del {
-            bindings = <&kp DELETE>;
+            bindings = <&kp COLON>;
             key-positions = <39 14 15>;
         };
 
